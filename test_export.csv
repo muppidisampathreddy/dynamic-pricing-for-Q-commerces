@@ -1,0 +1,37 @@
+product_id,product_name,brand,price,mrp,inventory,is_sold_out,scraped_at,keyword
+19512,Amul Taaza Toned Milk,Amul,29.0,29.0,12,false,2026-03-03 15:38:24.652374,Milk
+561268,Amul Gold Full Cream Milk,Amul,69.0,69.0,12,false,2026-03-03 15:38:24.652374,Milk
+19925,Mother Dairy Toned Milk,Mother Dairy,29.0,29.0,12,false,2026-03-03 15:38:24.652374,Milk
+160704,Amul Cow Milk,Amul,30.0,30.0,2,false,2026-03-03 15:38:24.652374,Milk
+176,Amul Taaza Homogenised Toned Milk,Amul,75.0,75.0,29,false,2026-03-03 15:38:24.652374,Milk
+206314,Amul Lactose Free Milk,Amul,25.0,25.0,45,false,2026-03-03 15:38:24.652374,Milk
+34778,Amul Moti Toned Milk (90 Days Shelf Life),Amul,32.0,32.0,50,false,2026-03-03 15:38:24.652374,Milk
+19924,Mother Dairy Full Cream Milk,Mother Dairy,35.0,35.0,9,false,2026-03-03 15:38:24.652374,Milk
+485113,Amul Taaza Toned Milk - Pack of 2,Amul,32.0,33.0,30,false,2026-03-03 15:38:24.652374,Milk
+179,Amul Gold Milk,Amul,80.0,80.0,38,false,2026-03-03 15:38:24.652374,Milk
+177181,Amul Slim 'n' Trim Skimmed Milk (Zero Cholesterol),Amul,82.0,82.0,14,false,2026-03-03 15:38:24.652374,Milk
+207766,Mother Dairy FIT Life Homogenized Double Toned Milk (450 ml),Mother Dairy,32.0,32.0,15,false,2026-03-03 15:38:24.652374,Milk
+530158,Onion (Pyaz),Freshbury,29.0,36.0,50,false,2026-03-03 15:38:35.648465,Onions
+532987,Onion - Pack of 2 (Pyaz),Freshbury,57.0,72.0,50,false,2026-03-03 15:38:35.648465,Onions
+421744,Spring Onion (Hari Pyaz),Freshbury,21.0,24.0,6,false,2026-03-03 15:38:35.648465,Onions
+595308,Organically Grown Onion (Pyaz),Vegan Farms,36.0,46.0,5,false,2026-03-03 15:38:35.648465,Onions
+447623,Baby Onion (Sirka Pyaz),"",17.0,21.0,3,false,2026-03-03 15:38:35.648465,Onions
+729798,Organically Grown Spring Onion,Freshbury,25.0,30.0,9,false,2026-03-03 15:38:35.648465,Onions
+366032,Desi Tomato (Tamatar),"",19.0,25.0,50,false,2026-03-03 15:38:35.648465,Onions
+367909,Hybrid Tomato (Tamatar),"",20.0,26.0,50,false,2026-03-03 15:38:35.648465,Onions
+602590,Organically Grown Tomato (Hybrid) (Tamatar),Siya Fruits And Vegetables,32.0,37.0,9,false,2026-03-03 15:38:35.648465,Onions
+609555,Organically Grown Tomato (Desi) (Tamatar),Bhoomi Farms,37.0,45.0,13,false,2026-03-03 15:38:35.648465,Onions
+440229,Cherry Tomatoes,"",53.0,64.0,5,false,2026-03-03 15:38:35.648465,Onions
+568820,Mix Cherry Tomatoes,"",59.0,76.0,6,false,2026-03-03 15:38:35.648465,Onions
+566908,Haldiram's Sour Cream & Onion Chips - Pack of 2,Haldiram's,65.0,100.0,3,false,2026-03-03 15:38:38.214149,Chips
+11150,Uncle Chipps Spicy Treat Flavour Potato Chips,Uncle Chipps,20.0,20.0,50,false,2026-03-03 15:38:38.214149,Chips
+240092,Lay's India's Magic Masala Potato Chips,Lay's,20.0,20.0,50,false,2026-03-03 15:38:38.214149,Chips
+289152,Lay's West Indies Hot n Sweet Chilli Flavour Potato Chips,Lay's,20.0,20.0,50,false,2026-03-03 15:38:38.214149,Chips
+557647,Haldiram's Pudina Treat Potato Chips - Pack of 2,Haldiram's,65.0,100.0,11,false,2026-03-03 15:38:38.214149,Chips
+574,Lay's Chile Limon Flavour Potato Chips,Lay's,20.0,20.0,31,false,2026-03-03 15:38:38.214149,Chips
+57435,Lay's Classic Salted Potato Chips,Lay's,20.0,20.0,34,false,2026-03-03 15:38:38.214149,Chips
+223819,Lay's Crispz Herb & Onion Potato Chips,Lay's,20.0,20.0,50,false,2026-03-03 15:38:38.214149,Chips
+441588,Lay's India's Magic Masala Potato Chips - Buy 2 Get 1 Free,Lay's,96.0,144.0,13,false,2026-03-03 15:38:38.214149,Chips
+432774,Lay's American Style Cream & Onion Potato Chips,Lay's,30.0,30.0,13,false,2026-03-03 15:38:38.214149,Chips
+481420,Snackible Peri Peri Ragi Chips,Snackible,35.0,50.0,27,false,2026-03-03 15:38:38.214149,Chips
+45377,Uncle Chipps Plain Salted Potato Chips,Uncle Chipps,20.0,20.0,37,false,2026-03-03 15:38:38.214149,Chips
