@@ -10,10 +10,11 @@ __pycache__/
 *.pyd
 
 # Data files (Scraped results and databases)
-# *.json
+*.json
 *.db
-# *.csv
+*.csv
 *.log
+data/
 
 # macOS system files
 .DS_Store
