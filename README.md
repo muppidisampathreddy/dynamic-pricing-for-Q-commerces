@@ -1,4 +1,4 @@
-# 🏙️ Blinkit High-Frequency Data Pipeline (2026 Edition)
+# 🏙️ Q-commerces High-Frequency Data Pipeline (2026 Edition)
 
 A production-grade, asynchronous data pipeline designed to scrape, process, and analyze hyper-local commerce data from **Blinkit**. This project was built to bypass advanced anti-bot measures and handle high-volume extractions (~20k+ rows) with professional-standard modularity.
 
