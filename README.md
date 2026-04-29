@@ -93,5 +93,71 @@ Currently, the pipeline generates ~18,000 to 22,000 rows across **27+ categories
 
 ---
 
+---
+
+## 🤖 ML Pipeline & Dashboard (Phase 2)
+
+After scraping, run a fully automated ML pipeline that cleans the data, engineers features, generates EDA charts, trains three machine-learning models, and exposes everything via a Streamlit dashboard.
+
+### Architecture
+
+```text
+src/ml_pipeline/
+  config.py        # schema, thresholds, category map
+  cleaner.py       # schema validation, dedup, multi-pack unit parsing, imputation
+  features.py      # discount_pct, price_per_unit, log_price, category mapping
+  eda.py           # auto-generates 8 charts to reports/figures/
+  models.py        # RF regressor, RF classifier, KMeans + PCA
+pipeline.py        # single entry point — runs everything end-to-end
+dashboard/app.py   # Streamlit dashboard with 6 tabs
+reports/
+  OBSERVATIONS.md  # data patterns + pipeline spec
+  DEMO_TALKING_POINTS.md
+  metrics.json     # last-run metrics
+  figures/*.png    # all charts
+models/*.joblib    # trained model artifacts
+```
+
+### One-command pipeline
+
+```bash
+python pipeline.py --input data/blinkit_final_extraction.csv
+```
+
+The pipeline auto-handles: schema validation → constant-column drop → product dedup → multi-pack unit parsing → rare-unit bucketing → median imputation → feature engineering → 8 EDA charts → RF price model → RF discount classifier → KMeans + PCA clustering → metrics export.
+
+### Dashboard
+
+```bash
+streamlit run dashboard/app.py
+```
+
+Tabs: **Overview · EDA · Price Predictor (interactive) · Discount Insights · Clusters · Pipeline**
+
+### Models trained on this snapshot
+
+| Model | Task | Metric |
+|---|---|---|
+| RF Regressor | Predict `price` from product attributes | R² = 0.825, MAE ≈ Rs.40 |
+| RF Classifier | Predict `is_high_discount` (≥15% off) | Accuracy 85.9%, F1 = 0.88, AUC = 0.94 |
+| KMeans (k=4) | Unsupervised product segmentation | 4 clusters by price/discount/unit profile |
+
+### Reusable for any Q-commerce platform
+
+The pipeline is data-agnostic within its schema. Drop in a CSV from Zepto, Instamart, or BigBasket with the same columns and re-run:
+
+```bash
+python pipeline.py --input data/zepto_export.csv --tag zepto
+streamlit run dashboard/app.py
+```
+
+All cleaning rules are documented and justified in [reports/OBSERVATIONS.md](reports/OBSERVATIONS.md).
+
+### Future work — time-series forecasting
+
+The `scraped_at` column and DuckDB `price_history` schema already support time series. Once daily scrapes accumulate ≥7 days of data, plug in **Prophet** or RF with lag features for true price forecasting. Architecture is ready; only the data history is missing.
+
+---
+
 ## ⚖️ Disclaimer
 This project is for educational and research purposes only. Ensure compliance with Blinkit’s Terms of Service and `robots.txt` before use.

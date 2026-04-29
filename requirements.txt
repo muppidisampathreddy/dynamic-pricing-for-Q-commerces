@@ -18,3 +18,12 @@ pyarrow==23.0.1
 pycparser==3.0
 pyee==13.0.1
 typing_extensions==4.15.0
+
+# ML pipeline + dashboard
+scikit-learn==1.8.0
+pandas==3.0.2
+matplotlib==3.10.9
+seaborn==0.13.2
+joblib==1.5.3
+streamlit==1.57.0
+plotly==6.7.0
