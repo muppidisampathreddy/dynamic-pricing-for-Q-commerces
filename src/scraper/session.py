@@ -1,8 +1,13 @@
 import asyncio
-import time
+import os
 import re
 import random
 from playwright.async_api import async_playwright
+
+DEFAULT_LAT = os.getenv("SCRAPER_LAT", "0.0")
+DEFAULT_LON = os.getenv("SCRAPER_LON", "0.0")
+DEFAULT_DEVICE_ID = os.getenv("SCRAPER_DEVICE_ID", "")
+DEFAULT_APP_VERSION = os.getenv("SCRAPER_APP_VERSION", "1010101010")
 
 class AsyncSessionManager:
     def __init__(self):
@@ -48,13 +53,13 @@ class AsyncSessionManager:
             "accept": "*/*",
             "accept-language": "en-US,en;q=0.9",
             "app_client": self.meta.get("app_client", "consumer_web"),
-            "app_version": self.meta.get("app_version", "1010101010"),
+            "app_version": self.meta.get("app_version", DEFAULT_APP_VERSION),
             "auth_key": str(self.auth_key),
             "access_token": "null",
             "content-type": "application/json",
-            "device_id": self.meta.get("device_id", "534296b3c1b246b3"),
-            "lat": self.meta.get("lat", "17.4657191"),
-            "lon": self.meta.get("lon", "78.3511035"),
+            "device_id": self.meta.get("device_id", DEFAULT_DEVICE_ID),
+            "lat": self.meta.get("lat", DEFAULT_LAT),
+            "lon": self.meta.get("lon", DEFAULT_LON),
             "origin": "https://blinkit.com",
             "referer": f"https://blinkit.com/s/?q={query or 'milk'}",
         }

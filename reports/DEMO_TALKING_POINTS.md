@@ -6,11 +6,11 @@ Use these as a guide while presenting. Each section maps to a tab in the dashboa
 
 ## 1. Project pitch (30 seconds)
 
-> "We built a complete data science pipeline for Q-commerce price intelligence. It scrapes live product data from Blinkit, cleans and enriches it, trains three machine-learning models, and surfaces insights through an interactive dashboard. The pipeline is reusable — drop in a CSV from Zepto, Instamart, or BigBasket with the same schema and everything re-runs automatically."
+> "We built a complete data science pipeline for Q-commerce price intelligence. It scrapes live product data from a hyper-local delivery platform, cleans and enriches it, trains three machine-learning models, and surfaces insights through an interactive dashboard. The pipeline is reusable — drop in a CSV from any other Q-Commerce platform with the same schema and everything re-runs automatically."
 
 ## 2. The data layer (1 minute)
 
-- **Source:** scraped 14,215 product records from Blinkit across 1,000+ search keywords, spanning 27 categories.
+- **Source:** scraped 14,215 product records from a Q-Commerce delivery platform across 1,000+ search keywords, spanning 27 categories.
 - **Anti-bot:** TLS-fingerprint impersonation via `curl_cffi`, Playwright session refresh on 429/401.
 - **Storage:** DuckDB for analytical queries, CSV exports for portability.
 
@@ -82,7 +82,7 @@ A: 80/20 train/test split, R² reported on held-out test set, residual plot show
 A: Multi-pack unit notation. Items like "Amul Taaza 2-pack" came in as `unit_value=2, unit_type="x 200 ml"`. We wrote a regex parser that detects multi-pack format and re-derives total quantity (2 × 200 = 400 ml). Without this, `price_per_unit` would have been wildly wrong.
 
 **Q: How would you scale this?**
-A: (1) Replace single-merchant scraping with multi-vendor (Zepto, Instamart) via the same pipeline. (2) Move DuckDB to a managed warehouse. (3) Schedule daily scrapes for time-series. (4) Add Prophet forecasting once we have ≥7 days of history.
+A: (1) Replace single-platform scraping with multi-platform support via the same pipeline. (2) Move DuckDB to a managed warehouse. (3) Schedule daily scrapes for time-series. (4) Add Prophet forecasting once we have ≥7 days of history.
 
 **Q: Why did you dedupe so aggressively (14k → 6.6k)?**
 A: The same product appeared under multiple search keywords (e.g., "Milk", "Milk pack", "Milk discount"). Modeling without dedup would have over-weighted popular products. We kept the first occurrence per `product_id`.

@@ -20,7 +20,7 @@ This document captures patterns observed in Q-commerce scraped data. Each observ
 | `unavail_qty` | int | optional | Often always 0 — drop if constant |
 | `rating` | float | optional | 0–5 |
 
-## Observations from Blinkit snapshot (14,215 rows, 2026-03-06)
+## Observations from Q-Commerce snapshot (14,215 rows, 2026-03-06)
 
 ### O1. Duplicate product_ids — same product appears across multiple keywords
 - **Observation:** 6,638 unique product_ids in 14,215 rows (~2.1× duplication).
@@ -50,7 +50,7 @@ This document captures patterns observed in Q-commerce scraped data. Each observ
 
 ### O6. `merchant_id` has very low cardinality
 - **Observation:** Only 4 distinct merchants in 14k rows.
-- **Why:** Blinkit dark stores serving the lat/lon used during scraping.
+- **Why:** dark stores serving the lat/lon used during scraping.
 - **Pipeline step:** Treat as categorical (one-hot). For new platforms cardinality will differ — pipeline auto-detects.
 
 ### O7. Discount is the most interesting derived feature

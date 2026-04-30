@@ -74,7 +74,7 @@ if df is None:
     st.stop()
 
 st.title("🛒 Q-Commerce Price Intelligence Dashboard")
-st.caption("Machine-learning analysis of Blinkit product catalog — built on a reusable pipeline")
+st.caption("Machine-learning analysis of a Q-Commerce product catalog — built on a reusable pipeline")
 
 with st.sidebar:
     st.header("📊 Snapshot")
